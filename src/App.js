@@ -191,7 +191,7 @@ const App = () => {
 
         {allWaves.map((wave, index) => {
           return (
-            <div key={index} style={{ backgroundColor: "darkorchid", marginTop: "16px", padding: "8px" }}>
+            <div key={index} style={{ backgroundColor: "darkslategray", marginTop: "16px", padding: "8px" }}>
               <div>Address: {wave.address}</div>
               <div>Time: {wave.timestamp.toString()}</div>
               <div>Message: {wave.message}</div>
