@@ -140,7 +140,7 @@ const App = () => {
         /*
         * Execute the actual wave from your smart contract
         */
-        let theMsg = (!document.querySelector("#msg").value) ? "gm" : document.querySelector("#msg").value;
+        let theMsg = (!document.querySelector("#msg-box").value) ? "gm" : document.querySelector("#msg").value;
         const waveTxn = await wavePortalContract.wave(theMsg);
         console.log("Mining...", waveTxn.hash);
 
@@ -175,9 +175,10 @@ const App = () => {
         I am sato kaiba and this is my wave machine! Built on Rinkeby thanks to <a href="https://buildspace.so/" id='bs-link'>Buildspace!</a>
         </div>
 
-        <div className="bio" style={{marginTop: 4}}>Write something in the box below and...</div>
-
-        <input id="msg" placeholder="gm"></input>
+        <div style={{marginTop: 4}}>
+        <label for="msg-box" className="bio">Send a message with your wave: </label>
+        <input id="msg-box" name="msg-box" placeholder="gm"></input>
+        </div>
 
         <button className="waveButton" onClick={wave}>
           Wave &amp; Message Me!
